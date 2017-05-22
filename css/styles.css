@@ -1,7 +1,168 @@
+/****************************
+GENERAL SETTINGS
+****************************/
+
 body {
 	font-family: 'Ubuntu', sans-serif;
+	margin: 0;  
+	padding: 0;
+	background-color: #D3D3D3;
+}
+
+a {
+	text-decoration: none;
+}
+
+*  {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/****************************
+Color schemes
+
+light purple: #E0B1CB
+pruple: #BE95C4
+violet: #9F86C0
+dark purple: #5E548E
+midnight purple: #231942
+light grey: #77A0A49
+charcoal grey: #6F7D8C
+
+****************************/
+
+
+
+/****************************
+HEADER SETTINGS
+****************************/
+
+header {
+	display: flex;
+	padding-left: .75rem;
+	padding-right: .75rem;
+	justify-content: space-between;
+}
+
+#hamburger-icon {
+	margin-right: 1rem;
+}
+
+#app-headline {
+	margin-top: .25rem;
+	margin-left: 4.5rem;
+	margin-right: auto;
+}
+
+#app-headline h1 {
+	font-size: 1.2rem;
+	color: #654597;
+}
+
+#bell-icon, #user-picture {
+	margin-top: 1rem;
+}
+
+.bell-icon {
+	margin-right: .4rem;
+}
+
+#bell .st0 {
+	fill: #AA78A6;
+}
+
+#bell {
+  width: 30x;
+  height: 30px;
+}
+
+.profile-image {
+	width: 30x;
+	height: 30px;
+	border-radius: 50%;
+}
+
+
+/****************************
+HAMBURGER MENU SETTINGS
+****************************/
+
+#hamburger-icon {
+	margin-top: 1rem;
+}
+
+.menu-link {
+	position: absolute;
+	font-size: 1.2rem;
+}
+
+.menu-link:link,
+.menu-link:visited {
+  color: #C5E7E2;
+  background: #AA78A6;
+  border-radius: 4px;
+  padding: .2rem .4rem;
+}
+
+.menu-link:hover,
+.menu-link:active {
+  color: #B9FFB7;
+  background: #654597;
+}
+
+
+/****************************
+SLIDE SETTINGS
+****************************/
+
+.wrap {
+    position: relative;
+}
+
+.panel {
+    position: fixed;
+    left: 8rem; /*left or right and the width of your navigation panel*/
+    width: 8rem; /*should match the above value*/
 }
 
 
 
 
+/****************************
+MEDIA QUERIES AT 768PX
+****************************/
+
+
+@media (min-width: 768px) {
+.menu-link {
+	display: none;
+}
+
+div nav #menu {
+	position: absolute;
+	display: inline-block;
+	top: 5rem;
+}
+
+.panel {
+    position: absolute;
+    left: 0; /*left or right and the width of your navigation panel*/
+    width: 0; /*should match the above value*/
+	margin-top: 50px;
+}
+
+}
+
+
+/****************************
+MEDIA QUERIES AT 1024PX
+****************************/
+
+
+@media (min-width: 1024px) {	
+	
+	
+	
+	
+}
