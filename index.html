@@ -30,12 +30,10 @@
 		</div>
 		<div id="user-picture">
 			<img src="images/pppp.jpg" alt="My Picture" class="profile-image">
-		</div>
-		
+		</div>		
 	</header>
 	
 	<div>
-
 		<nav id="menu" class="panel" role="navigation">
 		<ul id="svg-icons">
 			<li id="dashboard-icon">
@@ -129,17 +127,60 @@
 			<p><strong>Alert: </strong> Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id 
 				nibh ultricies vehicula ut id elit. Curabitur blanditur tempus porttitor. <span> X</span>
 			</p>
+		</div>
+		
+		<div class="chart-section wrap push">
+		
+			<h1>TRAFFIC</h1>
+			<ul>
+				<li class="" id="hourly">Hourly</li>
+				<li class="" id="daily">Daily</li>
+				<li class="selected" id="weekly">Weekly</li>
+				<li class="" id="monthly">Monthly</li>
+			</ul>
+		
+		
+		
+			<div class="lineChartSection">
+				<canvas id="lineChart"></canvas>				
+			</div>
+			
+			
+			<h1 id="daily-traffic">DAILY TRAFFIC</h1>
+			<div class="barChartSection">
+				<canvas id="barChart"></canvas>				
+			</div>			
+			
+			<h1 id="mobile-users">MOBILE USERS</h1>
+			<div class="donutChartSection">
+				<canvas id="donutChart"></canvas>				
+			</div>				
+			
+		</div>
+		
+		<div class="social-media">
+			<h1>SOCIAL STATS</h1>
+			<ul class="socialMediaIcons">
+				<li> 
+				<a href="#" class="twitter-icon">
+					
+				
+				</a>
+				</li>
+			
+			
+			</ul>
+		
 		
 		</div>
+		
+		
 	
 	</div>
 	
-	
-	
-
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/bigSlide.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 	<script src="js/app.js"></script>
 
 </body>

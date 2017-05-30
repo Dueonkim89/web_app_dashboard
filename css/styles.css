@@ -6,7 +6,7 @@ body {
 	font-family: 'Ubuntu', sans-serif;
 	margin: 0;  
 	padding: 0;
-	background-color: #D3D3D3;
+	background-color: #BCC6CC;
 }
 
 a {
@@ -25,20 +25,6 @@ a {
 		clear: both;
 }
 
-/****************************
-Color schemes
-
-light purple: #E0B1CB
-pruple: #BE95C4
-violet: #9F86C0
-dark purple: #5E548E
-midnight purple: #231942
-light grey: #77A0A49
-charcoal grey: #6F7D8C
-
-****************************/
-
-
 
 /****************************
 HEADER SETTINGS
@@ -49,7 +35,7 @@ header {
 	padding-left: .75rem;
 	padding-right: .75rem;
 	justify-content: space-between;
-	background-color: #BCC6CC;
+	background-color: #D3D3D3;
 	padding-bottom: 1.2rem;
 }
 
@@ -218,22 +204,21 @@ SEARCH SECTION
 	z-index: 1;
 }
 
-#searchbox_div
 
 #search_icon {
 	width: 15x;
 	height: 15px;
 	position: absolute;
-	margin-left: 185px; 
+	margin-left: 160px; 
 	bottom: 28%;
 }
 
 #search_box {
 	border-radius: 5px;
-	margin-left: 2rem;
-	padding-top: 4px;
-	padding-bottom: 4px;
-	width: 11rem;
+	margin-left: 1.5rem;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 10rem;
 	border: 1.35px solid #4d4d4d;
 	font-family: 'Ubuntu', sans-serif;
 	font-size: .95rem;
@@ -246,7 +231,7 @@ SEARCH SECTION
 
 #search_box:focus {
 	outline: none;
-	border: 2px solid #9F86C0;
+	border: 3.5px solid #9F86C0;
 }
 
 /****************************
@@ -256,7 +241,7 @@ ALERT MESSAGE
 .alert_message {
 	padding-left: .75rem;
 	padding-right: .75rem;
-	margin-top: 2rem;
+	margin-top: 1.75rem;
 }
 
 .alert_message strong {
@@ -275,7 +260,7 @@ ALERT MESSAGE
 	position: absolute;
 	font-size: 1.45rem;
 	font-weight: bold;
-	margin-left: 85px;
+	margin-left: 185px;
 }
 
 .alert_message span:hover,
@@ -283,6 +268,100 @@ ALERT MESSAGE
 	cursor: pointer;
 }
 
+/****************************
+CHART SECTION
+****************************/
+.chart-section {
+	margin-top: 1.5rem;
+}
+
+.lineChartSection, .barChartSection{
+	position: relative;
+	padding-right: .5rem;
+	padding-left: .5rem;
+}
+
+.donutChartSection {
+	position: relative;
+	padding-right: .5rem;
+	padding-left: .5rem;
+}
+
+.chart-section ul {
+	display: flex;
+	margin-top: 0;
+	justify-content: space-between;
+	padding-left: .75rem;
+	padding-right: .75rem;
+	margin-bottom: 1rem;
+}
+
+.chart-section ul li {
+	margin-right: .25rem;
+	margin-left: .25rem;
+	font-size: .85rem;
+	background-color: #6F7D8C;
+	padding: 7px 8px;
+	border-radius: 10px;
+	color: #f5f5f5;
+	margin-bottom: 1.25rem;
+}
+
+
+.chart-section h1 {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	font-size: 1.15rem;
+	color: #9F86C0;
+	padding-left: .75rem;
+	padding-right: .75rem;
+}
+
+.chart-section ul li:hover,
+.chart-section ul li:focus {
+	cursor: pointer;
+	color: #e8c8b4;
+}
+
+.chart-section .selected {
+	background-color: #B19CD9;
+}
+
+#lineChart, #barChart, #donutChart {
+	padding-bottom: 1.15rem;
+	border-bottom: 1px solid #4B0082;
+}
+
+#daily-traffic, #mobile-users {
+	margin-top: 1.15rem;
+	margin-bottom: 1.75rem;
+}
+
+#lineChart {
+	height: 230px;
+}
+
+#barChart {
+	 height: 210px;
+ }
+ 
+ #donutChart {
+	 width: 260px;
+ }
+ 
+ /****************************
+SOCIAL MEDIA SECTION
+****************************/
+ .social-media {
+	padding-left: .75rem;
+	padding-right: .75rem;
+ }
+ 
+ .social-media  h1 {
+ 	font-size: 1.15rem;
+	color: #9F86C0;
+	margin-bottom: 1rem;
+  }
 
 
 /****************************
@@ -306,6 +385,10 @@ div nav #menu {
     left: 0; /*left or right and the width of your navigation panel*/
     width: 0; /*should match the above value*/
 	margin-top: 50px;
+}
+
+.lineChartSection {
+	display: flex;
 }
 
 }
