@@ -45,7 +45,7 @@ header {
 
 #app-headline {
 	margin-top: .25rem;
-	margin-left: 4.5rem;
+	margin-left: 4.1rem;
 	margin-right: auto;
 }
 
@@ -260,7 +260,7 @@ ALERT MESSAGE
 	position: absolute;
 	font-size: 1.45rem;
 	font-weight: bold;
-	margin-left: 185px;
+	margin-left: 180px;
 }
 
 .alert_message span:hover,
@@ -275,13 +275,7 @@ CHART SECTION
 	margin-top: 1.5rem;
 }
 
-.lineChartSection, .barChartSection{
-	position: relative;
-	padding-right: .5rem;
-	padding-left: .5rem;
-}
-
-.donutChartSection {
+.lineChartSection, .barChartSection, .donutChartSection {
 	position: relative;
 	padding-right: .5rem;
 	padding-left: .5rem;
@@ -358,10 +352,139 @@ SOCIAL MEDIA SECTION
  }
  
  .social-media  h1 {
+	margin-top: 1.25rem;
  	font-size: 1.15rem;
 	color: #9F86C0;
 	margin-bottom: 1rem;
   }
+
+#twitterIconBox {
+	position: relative;
+	border: 1px solid #8B008B;
+	padding: 3.25rem .75rem 3.25rem .75rem;
+	background: #D3D3D3;
+	border-radius: 6px;
+}  
+
+.circlePlacement::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: #7851A9;
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+    background: #7851A9;
+	bottom: 13px;
+}
+  
+.twitter-icon {
+	width: 45x;
+	height: 45px;
+	position: absolute;
+	bottom: 25px;
+	left: 11%;
+} 
+
+.facebook-icon {
+	bottom: 32px;
+	left: 10%;
+	width: 45x;
+	height: 45px;
+	position: absolute;
+} 
+
+.google-icon {
+	bottom: 27px;
+	left: 11%;
+	width: 45x;
+	height: 45px;
+	position: absolute;
+}
+
+#twitterIconBox h2, #facebookIconBox h2, #googleIconBox h2 {
+	position: absolute;
+	left: 45%;
+	color: #4B0082;
+	bottom: 60%;
+	font-size: 1.15rem;
+}
+
+#twitterIconBox h1, #facebookIconBox h1, #googleIconBox h1 {
+	position: absolute;
+	left: 45%;
+	font-size: 2rem;
+	bottom: 5%;
+}
+  
+#facebookIconBox, #googleIconBox {
+	margin-top: 1.5rem;
+	position: relative;
+	border: 1px solid #8B008B;
+	padding: 3.25rem .75rem 3.25rem .75rem;
+	background: #D3D3D3;
+	border-radius: 6px;
+}  
+
+#bottom-border {
+	padding-bottom: 1.55rem;
+	border-bottom: 1px solid #4B0082;
+}
+
+
+/****************************
+NEW MEMBERS SECTION
+****************************/
+.new-members {
+	padding-left: .75rem;
+	padding-right: .75rem;
+	position: relative;
+}
+
+#member-heading {
+	font-size: 1.15rem;
+	color: #9F86C0;
+	margin-top: 1.25rem;
+	margin-bottom: 1.15rem;
+}
+
+.member-pics {
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+}
+
+#member-1 {
+	position: relative;
+	margin-bottom: 1.75rem;
+}
+
+.member-names {
+	color: #4B0082;
+	position: absolute;
+	font-size: .90rem;
+	left: 17%;
+	bottom: 35%;
+}
+
+.member-email {
+	font-size: .70rem;
+	position: absolute;
+	color: #190236;
+	left: 17%;
+	bottom: 20%;
+}
+
+.join-date {
+	color: #4B0082;
+	position: absolute;
+	font-size: .85rem;
+	bottom: 20%;
+	left: 80%;
+}
+
+
+
 
 
 /****************************
