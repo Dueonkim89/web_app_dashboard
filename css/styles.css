@@ -216,13 +216,11 @@ SEARCH SECTION
 #search_box {
 	border-radius: 5px;
 	margin-left: 1.5rem;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding: 5px 0 5px 10px;
 	width: 10rem;
-	border: 1.35px solid #4d4d4d;
+	border: 2px solid #8B008B;
 	font-family: 'Ubuntu', sans-serif;
 	font-size: .95rem;
-	padding-left: 10px;
 	color: #7B68EE;
 	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
@@ -231,7 +229,8 @@ SEARCH SECTION
 
 #search_box:focus {
 	outline: none;
-	border: 3.5px solid #9F86C0;
+	border: 3px solid #9F86C0;
+	
 }
 
 /****************************
@@ -441,6 +440,12 @@ NEW MEMBERS SECTION
 	position: relative;
 }
 
+.new-members #bottom-border {
+	padding-bottom: 0;
+	margin-bottom: .75rem;
+}
+
+
 #member-heading {
 	font-size: 1.15rem;
 	color: #9F86C0;
@@ -456,7 +461,7 @@ NEW MEMBERS SECTION
 
 #member-1 {
 	position: relative;
-	margin-bottom: 1.75rem;
+	margin-bottom: .75rem;
 }
 
 .member-names {
@@ -483,9 +488,150 @@ NEW MEMBERS SECTION
 	left: 80%;
 }
 
+#member-2, #member-3, #member-4 {
+	border-top: 1px solid #4B0082;
+	padding-top: .75rem;
+	position: relative;
+	margin-bottom: .75rem;
+}
+
+#member-2 .member-names, #member-3 .member-names, 
+#member-4 .member-names {
+	bottom: 27%;
+}
+
+#member-2 .member-email, #member-2 .join-date, 
+#member-3 .member-email, #member-3 .join-date,
+#member-4 .member-email, #member-4 .join-date {
+	bottom: 15%;
+} 
+
+/****************************
+MESSAGE SECTION
+****************************/
+
+form {
+	margin-top: 1.15rem;
+	padding-left: .75rem;
+	padding-right: .75rem;
+	
+}
+
+.message-section label {
+	font-size: 1.15rem;
+	color: #9F86C0;
+	font-weight: bold;
+}
+
+#user_searcher {
+	margin-top: 1rem;
+	width: 100%;
+	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	border: 1.35px solid #8B008B;
+	border-radius: 6px;
+	font-size: 1rem;
+	padding: 8px 0 8px 10px;
+	margin-bottom: 1rem;
+}
+
+#user_searcher:focus, #user_message:focus {
+	outline: none; 
+	border: 3px solid #9F86C0;
+}
+
+#user_message {
+	font-size: 1rem;
+	resize: none;
+	width: 100%;
+	border-radius: 6px;
+	border: 1.35px solid #8B008B;
+	height: 120px;
+	padding: 5px 10px 5px 10px;
+	margin-bottom: 1rem;
+	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+fieldset {
+	padding: 0;
+	border: none;
+}
+
+button {
+	width: 100%;
+	color: white;
+	background: #7851A9;
+	border-radius: 5px;
+	border: 1.35px solid  #4B0082;
+	font-size: 1rem;
+	padding: 14px 0 14px 0;
+	margin-bottom: 1rem;
+}
+
+button:focus {
+	outline: none; 
+}
+
+.message-section #bottom-border {
+	padding-bottom: .5rem;
+	margin-bottom: .75rem;
+}
+
+/****************************
+RECENT ACTIVITY
+****************************/
+.recent-activity {
+	padding-left: .75rem;
+	padding-right: .75rem;
+}
 
 
+.recent-activity h1 {
+	font-size: 1.15rem;
+	color: #9F86C0;
+	margin-top: 1.25rem;
+	margin-bottom: 1.15rem;
+}
 
+#activity-1 {
+	position: relative;
+	margin-bottom: 1.65rem;
+}
+
+.activity-update {
+	color: #4B0082;
+	position: absolute;
+	font-size: .90rem;
+	left: 17%;
+	bottom: 25%;
+	font-weight: bold;
+}
+
+.time-update {
+	left: 17%;
+	font-size: .70rem;
+	position: absolute;
+	color: #190236;
+	bottom: -7px;
+	font-weight: bold;
+}
+
+.arrow-icon {
+	position: absolute;
+	bottom: 20%;
+	left: 90%;
+	cursor: pointer;
+}
+
+#activity-2 {
+	border-top: 1px solid #4B0082;
+	padding-top: 1rem;
+	position: relative;
+	margin-bottom: 1.65rem;
+}
 
 /****************************
 MEDIA QUERIES AT 768PX
