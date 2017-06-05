@@ -3,17 +3,15 @@ $('.menu-link').bigSlide({
 	'menuWidth': '4.5rem'
 });
 
+//window.innerWidth
 
-var $viewport_width = $(window).width();
-
-$(window).on('resize', function(event) {
-	if ($viewport_width >= 768) {
+//$(window).on('resize', function(event) {
+	//if ($viewport_width >= 768) {
 		//$('.menu-link').bigSlide({
-		//'menuWidth': '0rem',
 		//'state': 'open'
-		console.log($viewport_width);
-		}
-});
+		//console.log($viewport_width);
+	//	}
+// });
 
 
 //chart settings
@@ -105,8 +103,7 @@ var myDonutChart = new Chart (donutChart, {
 					boxWidth: 25,
 					fontSize: 14,
 				}
-			}
-			
+			}		
 	}
 });
 
