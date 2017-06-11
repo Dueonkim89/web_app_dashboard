@@ -7,6 +7,7 @@ body {
 	margin: 0;  
 	padding: 0;
 	background-color: #BCC6CC;
+	box-sizing: border-box;
 }
 
 a {
@@ -40,13 +41,17 @@ header {
 	padding-bottom: 1.2rem;
 }
 
+header h2 {
+	display: none;
+}
+
 #hamburger-icon {
 	margin-right: 1rem;
 }
 
 #app-headline {
 	margin-top: .25rem;
-	margin-left: 4.1rem;
+	margin-left: 5rem;
 	margin-right: auto;
 }
 
@@ -100,45 +105,31 @@ header {
 HAMBURGER MENU SETTINGS
 ****************************/
 
-#hamburger-icon {
+.nav-toggle {
 	margin-top: 1rem;
 }
 
-.menu-link {
+.nav-toggle {
 	position: absolute;
 	font-size: 1.2rem;
 }
 
-.menu-link:link,
-.menu-link:visited {
+.nav-toggle:link,
+.nav-toggle:visited {
   color: #C5E7E2;
   background: #AA78A6;
   border-radius: 4px;
   padding: .2rem .4rem;
 }
 
-.menu-link:hover,
-.menu-link:active {
+.nav-toggle:hover,
+.nav-toggle:active {
   color: #B9FFB7;
-  background: #654597;
-}
-
-/****************************
-SLIDE SETTINGS
-****************************/
-
-.wrap {
-    position: relative;
-}
-
-.panel {
-    position: fixed;
-    left: 4.5rem; /*left or right and the width of your navigation panel*/
-    width: 4.5rem; /*should match the above value*/
+  background: #9932CC;;
 }
 
 /********************************
-SVG NAV LOGOS AND MENU SETTINGS
+SVG NAV LOGOS AND NAV SETTINGS
 ********************************/
 
 #dashboard .st0 {
@@ -154,40 +145,40 @@ SVG NAV LOGOS AND MENU SETTINGS
 	height: 30px;
 }
 
-#menu {
-	background-color: #8EA9B9;
-}
-
 #svg-icons {
 	display: flex;
-    flex-direction: column;
+    flex-direction: row;
+	justify-content: space-between;
 }
 
 #dashboard-icon, #members-icon, #visits-icon, #settings-icon {
-	padding-top: 2rem;
+	padding: 1.1rem 0 1.1rem 0;
 	text-align: center;
+}
+
+.nav-collapse {
+	background-color: #8EA9B9;
 }
 
 /****************************
 SEARCH SECTION
 ****************************/
-#search-headline {
-	font-size: 1.15rem;
-	color: #9F86C0;
-	margin-top: .45rem;
-}
 
 #search-section {
-	padding-top: 1.25rem;
-	padding-left: .75rem;
-	padding-right: .75rem;
 	display: flex;
 	position: relative;
 	justify-content: space-between;
 
 }
 
-#search-section::after {
+#search-headline {
+	font-size: 1.15rem;
+	color: #9F86C0;
+	padding-left: .75rem;
+	padding-top: .9rem;
+}
+
+/*#search-section::after {
 	position: absolute;
 	border-left: 1.75px solid #4d4d4d;
 	content: "";
@@ -199,26 +190,40 @@ SEARCH SECTION
 	border-bottom: 1.75px solid #4d4d4d;
 	padding-bottom: .15rem;
 	background-color: #6F7D8C;
-}
+}*/
 
 #searchbox_div {
-	z-index: 1;
+	margin-left: 1rem;
+	border-left: 1.75px solid #4d4d4d;
+	border-bottom: 1.75px solid #4d4d4d;
+	background-color: #6F7D8C;
+	padding: 1.25rem .75rem .8rem 0rem;
 }
 
 
 #search_icon {
-	width: 15x;
-	height: 15px;
+	width: 12px;
+	height: 12px;
 	position: absolute;
-	margin-left: 160px; 
-	bottom: 28%;
+	margin-left: -6px;
+	margin-top: -6px;
+}
+
+#search-button {
+	background: #fff;
+	border: none;
+	width: 25px;
+	height: 12px;
+	outline: none;
+	position: absolute;
+	margin-left: -32px;
+	margin-top: 6px;
 }
 
 #search_box {
 	border-radius: 5px;
-	margin-left: 1.5rem;
-	padding: 5px 0 5px 10px;
-	width: 10rem;
+	padding: 10px 0 10px 10px;
+	width: 80%;
 	border: 2px solid #8B008B;
 	font-family: 'Ubuntu', sans-serif;
 	font-size: .95rem;
@@ -226,12 +231,13 @@ SEARCH SECTION
 	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	margin-left: 1rem;
+	position: relative;
 }
 
 #search_box:focus {
 	outline: none;
-	border: 3px solid #9F86C0;
-	
+	border: 2.15px solid #9F86C0;
 }
 
 /****************************
@@ -242,6 +248,7 @@ ALERT MESSAGE
 	padding-left: .75rem;
 	padding-right: .75rem;
 	margin-top: 1.75rem;
+	
 }
 
 .alert_message strong {
@@ -253,20 +260,23 @@ ALERT MESSAGE
 	color: #f5f5f5;
 	padding: .75rem;
 	border-radius: 5px;
-	font-size: .90rem;
+	font-size: .85rem;
 }
 
-.alert_message span {
-	position: absolute;
+#x-button {
+	background: #4B0082;
+	border: none;
 	font-size: 1.45rem;
+	outline: none;	
 	font-weight: bold;
-	margin-left: 180px;
+	position: absolute;
+	width: 18px;
+	height: 10px;
+	margin-left: 70px;
+	margin-top: -15px;
+	
 }
 
-.alert_message span:hover,
- .alert_message span:focus {
-	cursor: pointer;
-}
 
 /****************************
 CHART SECTION
@@ -788,7 +798,6 @@ SAVE & CANCEL BUTTON
 /****************************
 FOOTER
 ****************************/
-
 footer {
 	margin-top: .95rem;
 	text-align: center;
@@ -798,33 +807,136 @@ footer {
 }
 
 
-
 /****************************
 MEDIA QUERIES AT 768PX
 ****************************/
-
-
 @media (min-width: 768px) {
-.menu-link {
+	
+/****************************
+GENERAL SETTINGS AT 768PX
+****************************/
+footer {
+	display: none;
+}	
+	
+.nav-toggle { /* Hamburger icon created by app*/
 	display: none;
 }
 
-div nav #menu {
-	position: absolute;
-	display: inline-block;
-	top: 5rem;
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;	
 }
 
-.panel {
-    position: absolute;
-    left: 0; /*left or right and the width of your navigation panel*/
-    width: 0; /*should match the above value*/
-	margin-top: 50px;
-}
-
-.lineChartSection {
+#main-div {
 	display: flex;
+	flex-direction: row;
+	flex: 1;
 }
+
+#content-div {
+	flex: 1;
+	min-width: 0; /*WOWWWWWWWWWWW, CRITICAL COMPONENT OF sidenavbar */
+}
+
+.nav-collapse {
+	flex: 0 0 5rem; /* set width of sidenavbar */
+}
+
+#svg-icons {
+	display: flex;
+    flex-direction: column;
+}
+
+.sideNavBar {
+	background-color: #8EA9B9;
+}
+
+/****************************
+HEADER SETTINGS AT 768PX
+****************************/
+
+header {
+	padding: .4rem 1rem .7rem 1rem;
+}
+
+#app-headline {
+	margin-left: 0;
+}
+
+#app-headline h1 {
+	font-size: 1.5rem;
+}
+
+#bell {
+  width: 32px;
+  height: 32px;
+  margin-right: 1.25rem;
+}
+
+#bell-icon {
+	margin-top: 1.25rem;
+}
+
+#bell-icon::after {
+    height: 1.75px;
+    width: 1.75px;
+    margin-left: 1.15rem;
+	bottom: 100%;
+}
+
+.profile-image {
+	width: 38x;
+	height: 38px;
+	margin-right: .75rem;
+	position: relative;
+}
+
+#user-picture::before {
+	border-left: 1px solid #6c7a86;
+	position: absolute;
+	content: "";
+	height: 52px;
+	margin-left: -1rem;
+	margin-top: -.5rem;
+}
+
+header h2 {
+	font-size: 1.15rem;
+	color: #6c7a86;
+	margin-top: 1.45rem;
+	font-weight: bold;
+}
+
+/****************************
+SEARCH SECTION AT 768PX
+****************************/
+
+#search-headline {
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 

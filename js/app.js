@@ -1,17 +1,24 @@
-//initialize hamburger menu slide option
-$('.menu-link').bigSlide({
-	'menuWidth': '4.5rem'
+//create hamburger menu
+var nav = responsiveNav(".nav-collapse", {
+	label: "&#9776;",
+	transition: 500
 });
 
-//window.innerWidth
+//resize event to adjust based on changing viewport width.
+$(window).resize(function() {
+	if (window.innerWidth >= 768) {
+		$('header h2').show();
+	} else if (window.innerWidth < 768) {
+		$('header h2').hide();
+	}
+});
 
-//$(window).on('resize', function(event) {
-	//if ($viewport_width >= 768) {
-		//$('.menu-link').bigSlide({
-		//'state': 'open'
-		//console.log($viewport_width);
-	//	}
-// });
+//load event to adjust based on starting viewport width.
+$(window).load(function() {
+	if (window.innerWidth >= 768) {
+		$('header h2').show();
+	}	
+});
 
 
 //chart settings
@@ -24,6 +31,8 @@ Chart.defaults.global.defaultFontSize = 12;
 
 
 //intialize the 3 default charts
+
+//line chart
 var ctx = document.getElementById("lineChart");
 var myLineChart = new Chart (ctx, {
 	type: 'line',
