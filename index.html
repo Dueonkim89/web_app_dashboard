@@ -134,64 +134,75 @@
 			
 			<div class="chart-section">
 			
-				<h1>TRAFFIC</h1>
-				<ul>
-					<li class="" id="hourly">Hourly</li>
-					<li class="" id="daily">Daily</li>
-					<li class="selected" id="weekly">Weekly</li>
-					<li class="" id="monthly">Monthly</li>
-				</ul>
-			
+				<div class="chartHeader">
+					<h1>TRAFFIC</h1>
+					<ul>
+						<li class="" id="hourly">Hourly</li>
+						<li class="" id="daily">Daily</li>
+						<li class="selected" id="weekly">Weekly</li>
+						<li class="" id="monthly">Monthly</li>
+					</ul>
+				</div>
 			
 			
 				<div class="lineChartSection">
 					<canvas id="lineChart"></canvas>				
 				</div>
 				
+				<div class="barAndDonutChart">
 				
-				<h1 id="daily-traffic">DAILY TRAFFIC</h1>
-				<div class="barChartSection">
-					<canvas id="barChart"></canvas>				
-				</div>			
+				<div id="mainBarDiv">
+					<h1 id="daily-traffic">DAILY TRAFFIC</h1>
+					<div class="barChartSection">
+						<canvas id="barChart"></canvas>				
+					</div>			
+				</div>
 				
-				<h1 id="mobile-users">MOBILE USERS</h1>
-				<div class="donutChartSection">
-					<canvas id="donutChart"></canvas>				
-				</div>				
+				<div id="mainDonutDiv">
+					<h1 id="mobile-users">MOBILE USERS</h1>
+					<div class="donutChartSection">
+						<canvas id="donutChart"></canvas>				
+					</div>				
+				</div>
 				
-			</div>
+				</div> <!-- main div for bar and donut chart -->
+				
+			</div> <!-- chart section div -->
 			
 			<div class="social-media">
 				<h1>SOCIAL STATS</h1>
 				
-				<div id="twitterIconBox">
-					<span class="circlePlacement"></span>
-					<img src="icons/icon-twitter.svg" alt="Twitter Icon" class="twitter-icon">
-					<h2>Twitter</h2>
-					<h1>10,345</h1>
-				</div>
+				<div id="socialMediaFlexContainer">
 				
-				<div id="facebookIconBox">
-					<span class="circlePlacement"></span>
-					<img src="icons/icon-facebook.svg" alt="Facebook Icon" class="facebook-icon">
-					<h2>Facebook</h2>
-					<h1>8,739</h1>
-				</div>
+					<div id="twitterIconBox">
+						<span class="circlePlacement"></span>
+						<img src="icons/icon-twitter.svg" alt="Twitter Icon" class="twitter-icon">
+						<h2>Twitter</h2>
+						<h1>10,345</h1>
+					</div>
+					
+					<div id="facebookIconBox">
+						<span class="circlePlacement"></span>
+						<img src="icons/icon-facebook.svg" alt="Facebook Icon" class="facebook-icon">
+						<h2>Facebook</h2>
+						<h1>8,739</h1>
+					</div>
+					
+					<div id="googleIconBox">
+						<span class="circlePlacement"></span>
+						<img src="icons/icon-google-plus.svg" alt="Google Icon" class="google-icon">
+						<h2>Google+</h2>
+						<h1>2,530</h1>
+					</div>	
 				
-				<div id="googleIconBox">
-					<span class="circlePlacement"></span>
-					<img src="icons/icon-google-plus.svg" alt="Google Icon" class="google-icon">
-					<h2>Google+</h2>
-					<h1>2,530</h1>
-				</div>	
+				</div> <!-- socialMediaFlexContainer div -->
 				
 				<div id="bottom-border">
 				</div>
 				
 			</div>
 
-			<div class="members-and-activity">
-			
+			<div class="members-and-activity">			
 				<div class="new-members">
 					<h1 id="member-heading">NEW MEMBERS</h1>
 					
@@ -228,22 +239,6 @@
 				
 				</div>
 				
-				<div class="message-section">	
-					<form>
-						<fieldset>				
-						<label for="user_searcher">MESSAGE USER</label>
-						<input type="text" id="user_searcher" name="username_finder" placeholder="Search for User">
-						<textarea id="user_message" name="user_message" placeholder="Message for User"></textarea>
-						<button id="send_button" type="submit">SEND</button>		
-						</fieldset>
-						
-						<div id="bottom-border">
-						</div>
-					</form>	
-					
-					
-				</div>
-			
 				<div class="recent-activity">
 					<h1>RECENT ACTIVITY</h1>
 					
@@ -278,8 +273,25 @@
 					<div id="bottom-border">
 					</div>				
 				
-				</div>
+				</div>				
+			</div> <!--new members, recent activity  div -->		
+				
 			
+			<div class="message-and-settings">			
+				<div class="message-section">	
+					<form>
+						<fieldset>				
+						<label for="user_searcher">MESSAGE USER</label>
+						<input type="text" id="user_searcher" name="username_finder" placeholder="Search for User">
+						<textarea id="user_message" name="user_message" placeholder="Message for User"></textarea>
+						<button id="send_button" type="submit">SEND</button>		
+						</fieldset>
+						
+						<div id="bottom-border">
+						</div>
+					</form>	
+				</div>
+											
 				<div class="settings-section">
 					<h1>SETTINGS</h1>
 					
@@ -330,11 +342,10 @@
 					
 					<div class="saveAndCancel-div">
 						<button id="save_button" type="submit">SAVE</button>
-						<button id="cancel_button" type="submit">CANCEL</button>
-					
+						<button id="cancel_button" type="submit">CANCEL</button>					
 					</div> <!--saveAndCancel button div -->														
-				</div>	<!--settings section div -->	
-			</div> <!--new members, recent activity, message and settings  div -->	
+				</div>	<!--settings section div -->
+			</div>	<!-- message-and-settings div -->		
 		</main>	<!-- main element -->
 	</div> <!-- main div sans header  -->
 	

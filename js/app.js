@@ -8,18 +8,32 @@ var nav = responsiveNav(".nav-collapse", {
 $(window).resize(function() {
 	if (window.innerWidth >= 768) {
 		$('header h2').show();
+		$('.members-and-activity #bottom-border').hide();
+		$('.message-and-settings #bottom-border').hide();
+		$('.social-media #bottom-border').hide();
 	} else if (window.innerWidth < 768) {
 		$('header h2').hide();
+		$('.members-and-activity #bottom-border').show();
+		$('.message-and-settings #bottom-border').show();
+		$('.social-media #bottom-border').show();
 	}
 });
 
 //load event to adjust based on starting viewport width.
 $(window).load(function() {
+	$('.alert_message').hide().delay(1250).slideDown(800);
 	if (window.innerWidth >= 768) {
 		$('header h2').show();
+		$('.members-and-activity #bottom-border').hide();
+		$('.message-and-settings #bottom-border').hide();	
+		$('.social-media #bottom-border').hide();	
 	}	
 });
 
+//allow UI to close alert message-and-settings
+$('#x-button').click(function() {
+	$(this).parent().parent().slideUp(800);
+});
 
 //chart settings
 Chart.defaults.global.legend.display = false;
@@ -108,9 +122,11 @@ var myDonutChart = new Chart (donutChart, {
 		responsive: true,
 		    legend: {
 				display: true,
+				position: 'right',
 				labels: {
 					boxWidth: 25,
 					fontSize: 14,
+					padding: 30
 				}
 			}		
 	}

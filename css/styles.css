@@ -1,7 +1,6 @@
 /****************************
 GENERAL SETTINGS
 ****************************/
-
 body {
 	font-family: 'Ubuntu', sans-serif;
 	margin: 0;  
@@ -26,12 +25,9 @@ a {
 		clear: both;
 }
 
-
-
 /****************************
 HEADER SETTINGS
 ****************************/
-
 header {
 	display: flex;
 	padding-left: .75rem;
@@ -245,8 +241,8 @@ ALERT MESSAGE
 ****************************/
 
 .alert_message {
-	padding-left: .75rem;
-	padding-right: .75rem;
+	padding-left: 1.15rem;
+	padding-right: 1.15rem;
 	margin-top: 1.75rem;
 	
 }
@@ -260,21 +256,22 @@ ALERT MESSAGE
 	color: #f5f5f5;
 	padding: .75rem;
 	border-radius: 5px;
-	font-size: .85rem;
+	font-size: .83rem;
+	line-height: 145%;
 }
 
 #x-button {
 	background: #4B0082;
 	border: none;
-	font-size: 1.45rem;
+	font-size: 1.25rem;
 	outline: none;	
 	font-weight: bold;
 	position: absolute;
 	width: 18px;
 	height: 10px;
-	margin-left: 70px;
-	margin-top: -15px;
-	
+	margin-left: 12px;
+	margin-top: -10px;
+	width: calc(1% - 200px);
 }
 
 
@@ -312,7 +309,7 @@ CHART SECTION
 }
 
 
-.chart-section h1 {
+.chartHeader h1, .chart-section h1 {
 	margin-top: 0;
 	margin-bottom: 1rem;
 	font-size: 1.15rem;
@@ -321,13 +318,13 @@ CHART SECTION
 	padding-right: .75rem;
 }
 
-.chart-section ul li:hover,
-.chart-section ul li:focus {
+.chartHeader ul li:hover,
+.chartHeader ul li:focus {
 	cursor: pointer;
 	color: #e8c8b4;
 }
 
-.chart-section .selected {
+.chartHeader .selected {
 	background-color: #B19CD9;
 }
 
@@ -349,8 +346,8 @@ CHART SECTION
 	 height: 210px;
  }
  
- #donutChart {
-	 width: 260px;
+#donutChart {
+	height: 190px;
  }
  
  /****************************
@@ -367,14 +364,6 @@ SOCIAL MEDIA SECTION
 	color: #9F86C0;
 	margin-bottom: 1rem;
   }
-
-#twitterIconBox {
-	position: relative;
-	border: 1px solid #8B008B;
-	padding: 3.25rem .75rem 3.25rem .75rem;
-	background: #D3D3D3;
-	border-radius: 6px;
-}  
 
 .circlePlacement::after {
     content: "";
@@ -393,12 +382,12 @@ SOCIAL MEDIA SECTION
 	height: 45px;
 	position: absolute;
 	bottom: 25px;
-	left: 11%;
+	left: 28px;
 } 
 
 .facebook-icon {
 	bottom: 32px;
-	left: 10%;
+	left: 28px;
 	width: 45x;
 	height: 45px;
 	position: absolute;
@@ -406,27 +395,58 @@ SOCIAL MEDIA SECTION
 
 .google-icon {
 	bottom: 27px;
-	left: 11%;
+	left: 30px;
 	width: 45x;
 	height: 45px;
 	position: absolute;
 }
 
-#twitterIconBox h2, #facebookIconBox h2, #googleIconBox h2 {
+#facebookIconBox h2 {
 	position: absolute;
-	left: 45%;
+	right: 70px;
 	color: #4B0082;
 	bottom: 60%;
 	font-size: 1.15rem;
 }
 
-#twitterIconBox h1, #facebookIconBox h1, #googleIconBox h1 {
+#googleIconBox h2 {
 	position: absolute;
-	left: 45%;
+	right: 78px;
+	color: #4B0082;
+	bottom: 60%;
+	font-size: 1.15rem;
+}
+
+#twitterIconBox h2 {
+	position: absolute;
+	right: 94px;
+	color: #4B0082;
+	bottom: 60%;
+	font-size: 1.15rem;
+}
+
+#twitterIconBox h1 {
+	position: absolute;
+	right: 60px;
 	font-size: 2rem;
 	bottom: 5%;
 }
-  
+
+#facebookIconBox h1, #googleIconBox h1 {
+	position: absolute;
+	right: 70px;
+	font-size: 2rem;
+	bottom: 5%;
+}
+
+ #twitterIconBox {
+	position: relative;
+	border: 1px solid #8B008B;
+	padding: 3.25rem .75rem 3.25rem .75rem;
+	background: #D3D3D3;
+	border-radius: 6px;
+}   
+
 #facebookIconBox, #googleIconBox {
 	margin-top: 1.5rem;
 	position: relative;
@@ -441,7 +461,6 @@ SOCIAL MEDIA SECTION
 	border-bottom: 1px solid #4B0082;
 }
 
-
 /****************************
 NEW MEMBERS SECTION
 ****************************/
@@ -455,7 +474,6 @@ NEW MEMBERS SECTION
 	padding-bottom: 0;
 	margin-bottom: .75rem;
 }
-
 
 #member-heading {
 	font-size: 1.15rem;
@@ -479,16 +497,16 @@ NEW MEMBERS SECTION
 	color: #4B0082;
 	position: absolute;
 	font-size: .90rem;
-	left: 17%;
-	bottom: 35%;
+	left: 46px;
+	bottom: 14px;
 }
 
 .member-email {
 	font-size: .70rem;
 	position: absolute;
 	color: #190236;
-	left: 17%;
-	bottom: 20%;
+	left: 46px;
+	bottom: 6px;
 }
 
 .join-date {
@@ -508,13 +526,13 @@ NEW MEMBERS SECTION
 
 #member-2 .member-names, #member-3 .member-names, 
 #member-4 .member-names {
-	bottom: 27%;
+	bottom: 14px;
 }
 
 #member-2 .member-email, #member-2 .join-date, 
 #member-3 .member-email, #member-3 .join-date,
 #member-4 .member-email, #member-4 .join-date {
-	bottom: 15%;
+	bottom: 6px;
 } 
 
 /****************************
@@ -576,7 +594,7 @@ button {
 	color: white;
 	background: #7851A9;
 	border-radius: 5px;
-	border: 1.35px solid  #4B0082;
+	border: 1.5px solid #9575bd;
 	font-size: 1rem;
 	padding: 14px 0 14px 0;
 	margin-bottom: 1rem;
@@ -599,7 +617,6 @@ RECENT ACTIVITY
 	padding-right: .75rem;
 }
 
-
 .recent-activity h1 {
 	font-size: 1.15rem;
 	color: #9F86C0;
@@ -616,23 +633,23 @@ RECENT ACTIVITY
 	color: #4B0082;
 	position: absolute;
 	font-size: .90rem;
-	left: 17%;
-	bottom: 23%;
+	left: 46px;
+	bottom: 14px;
 	font-weight: bold;
 }
 
 .time-update {
-	left: 17%;
+	left: 46px;
 	font-size: .70rem;
 	position: absolute;
 	color: #190236;
-	bottom: -7px;
+	bottom: -2px;
 	font-weight: bold;
 }
 
 .arrow-icon {
 	position: absolute;
-	bottom: 6px;
+	bottom: -3px;
 	left: 90%;
 	cursor: pointer;
 }
@@ -647,7 +664,7 @@ RECENT ACTIVITY
 #activity-2 .activity-update,
 #activity-3 .activity-update,
 #activity-4 .activity-update {
-	bottom: 15%;
+	bottom: 14px;
 }
 
 .recent-activity #bottom-border {
@@ -689,7 +706,6 @@ TOGGLE SWITCH SECTION
 	margin-top: .5rem;
 	margin-bottom: 1.15rem;
 	display: inline-block;
-	
 }
 
 .switch-light .switch-ios {
@@ -847,16 +863,22 @@ body {
 #svg-icons {
 	display: flex;
     flex-direction: column;
+	margin-top: .5rem;
 }
 
 .sideNavBar {
 	background-color: #8EA9B9;
 }
 
+#dashboard, #members, #visits, #settings {
+	width: 35x;
+	height: 35px;
+}
+
+
 /****************************
 HEADER SETTINGS AT 768PX
 ****************************/
-
 header {
 	padding: .4rem 1rem .7rem 1rem;
 }
@@ -909,46 +931,361 @@ header h2 {
 	font-weight: bold;
 }
 
-/****************************
-SEARCH SECTION AT 768PX
-****************************/
+/*******************************
+SEARCH & ALERT SECTION AT 768PX
+*******************************/
 
 #search-headline {
+	font-size: 1.25rem;
+}
+
+#searchbox_div {
+	width: calc(100% - 130px + 20px);
+	display: flex;
+	justify-content: flex-end;
+	padding: 1.25rem 1rem 1.25rem 0rem;
+}
+
+#search_box {
+	width: 65%;
+	max-width: 360px;
+	font-size: 1.1rem;
+}
+
+#search-button {
+	margin-left: -10px;
+}
+
+.alert_message {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}	
 	
+.alert_message p {
+	padding: .95rem;
+	font-size: .95rem;
+	line-height: 155%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#x-button {
+	font-size: 1.65rem;
 }
 
+#search_icon {
+	width: 16px;
+	height: 16px;
+}
+
+#search-button {
+	height: 17px;
+}
+
+/*******************************
+CHART SECTION AT 768PX
+*******************************/
+.chartHeader h1 {
+	font-size: 1.25rem;
+}
+
+.chart-section ul li {
+	margin-right: .25rem;
+	margin-left: .25rem;
+	font-size: 1rem;
+	padding: 8px 10px;
+	border-radius: 10px;
+	color: #f5f5f5;
+	margin-bottom: 0rem;
+}
+
+.chartHeader {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: .8rem;
+	margin-top: 1.65rem;
+}
+
+.barAndDonutChart {
+	display: flex;
+	justify-content: around;
+	border-bottom: 1px solid #4B0082;
+	border-top: 1px solid #4B0082;
+	margin-top: .75rem;
+}
+
+#barChart, #donutChart, #lineChart {
+	border-bottom: none;
+}
+#barChart, #donutChart {
+	padding-bottom: .75rem;
+}
+
+#donutChart {
+	height: 230px;
+ }
+
+#mainBarDiv {
+	border-right: 1px solid #4B0082;
+}
+
+.barAndDonutChart > div {
+	width: 50%; /* Get each flex items to take up exactly 50% space*/
+}
+
+#lineChart {
+	padding-bottom: .75rem;
+}
+
+#mainDonutDiv {
+	padding-left: 1rem;
+}
+
+#daily-traffic, #mobile-users {
+	padding: 0;
+	font-size: 1.25rem;
+}
+
+.donutChartSection  {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.lineChartSection, .barAndDonutChart {
+	position: relative;
+	padding-right: 1rem;
+	padding-left: 1rem;
+}
+
+/*******************************
+SOCIAL MEDIA SECTION AT 768PX
+*******************************/
+#socialMediaFlexContainer {
+	display: flex;
+	justify-content: space-between;
+	padding-right: 1rem;
+	padding-left: 1rem;
+}
+
+#twitterIconBox, #facebookIconBox, #googleIconBox  {
+	width: 35%;
+}
+
+#twitterIconBox, #facebookIconBox {
+	margin-right: 1rem;
+}
+
+#facebookIconBox, #googleIconBox {
+	margin-top: 0rem;
+}  
+
+.social-media {
+	padding: 0 0 1.75rem 0;
+	border-bottom: 1px solid #4B0082;
+}
+
+.social-media h1 {
+	padding-left: 1rem;
+}
+
+.circlePlacement::after {
+    height: 66px;
+    width: 66px;
+}
+
+.twitter-icon {
+	width: 38x;
+	height: 38px;
+	bottom: 25px;
+	left: 30px;
+} 
+
+.facebook-icon {
+	bottom: 32px;
+	left: 28px;
+	width: 38x;
+	height: 38px;
+} 
+.google-icon {
+	bottom: 27px;
+	left: 30px;
+	width: 38x;
+	height: 38px;
+}
+#twitterIconBox h2 {
+	left: 95px;		
+	bottom: 60%;
+}
+
+#facebookIconBox h2, #googleIconBox h2  {
+	left: 100px;		
+	bottom: 60%;
+}
+#twitterIconBox h1 {
+	left: 75px;			
+}
+#facebookIconBox h1, #googleIconBox h1 {
+	left: 83px;		
+	bottom: 5%;
+}
+/*******************************
+MEMBERS SECTION AT 768PX
+*******************************/
+.members-and-activity, .message-and-settings {
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid #4B0082;
+}
+
+.member-email , .time-update {
+	font-size: .85rem;
+}
+
+.member-names, .activity-update  {
+	font-size: .96rem;
+}
+
+.new-members {
+	border-right:  1px solid #4B0082;
+}
+
+.new-members, .message-section, 
+.recent-activity, .settings-section { 
+	flex: 1 50%; 
+}
+
+#member-1, #activity-1 {
+	margin-bottom: 1.65rem;
+}
+
+#member-2, #activity-2,    /* border spacing*/
+#member-3, #activity-3 ,
+#member-4, #activity-4 {
+	padding-top: 1.15rem;
+	margin-bottom: 1.65rem;
+}
+
+#member-2 .member-names, #member-3 .member-names, 
+#member-4 .member-names, #member-1 .member-names,
+#activity-1 .activity-update, #activity-2 .activity-update,
+#activity-3 .activity-update , #activity-4 .activity-update {
+	bottom: 8px;
+}
+
+#member-1 .member-email, #member-1 .join-date, 
+#member-2 .member-email, #member-2 .join-date, 
+#member-3 .member-email, #member-3 .join-date,
+#member-4 .member-email, #member-4 .join-date {
+	bottom: 2px;
+} 
+
+.time-update {
+	bottom: -10px;
+}
+
+.arrow-icon {
+	bottom: -10px;
+}
+
+.message-section label  {
+	margin-top: 1.25rem;
+    margin-bottom: 1.15rem;
+}
+
+.message-section {
+	border-right:  1px solid #4B0082;
+}
+
+#user_message {
+	margin-bottom: 1.15rem;
+	height: 140px;
+}
+
+#timezone-options {
+	margin-top: 2.45rem;
+}
+
+#send_button, #save_button, #cancel_button {
+	margin-bottom: 1.25rem;
+}
+
+.settings-section h2 {
+	font-size: .95rem;
+}
+
+.message-and-settings {
+	padding-bottom: 2rem;
+}
 
 /****************************
 MEDIA QUERIES AT 1024PX
 ****************************/
-
-
 @media (min-width: 1024px) {	
+	.nav-collapse {
+		flex: 0 0 5.25rem; /* set width of sidenavbar */
+	}
+
+	#search_box {
+		max-width: 360px;
+	}
 	
+	#daily-traffic, #mobile-users {
+		margin-top: 1.5rem;
+	}
+
+	#barChart, #donutChart {
+		padding-bottom: 1.45rem;
+	}
+
+	#barChart {
+	 height: 240px;
+	}
 	
+	#donutChart {
+		height: 235px;
+	}
 	
+	.social-media {
+		padding: 0 0 2rem 0;
+	}
+
+	#twitterIconBox, #facebookIconBox {
+		margin-right: 1.75rem;
+	}
+
+	#twitterIconBox h2, #facebookIconBox h2, #googleIconBox h2 {
+		left: 125px;		
+	}
 	
+	#twitterIconBox h1 {
+		left: 105px;			
+	}
+
+	#facebookIconBox h1, #googleIconBox h1 {
+		left: 107px;		
+	}	
+	
+	#activity-1 .activity-update, #activity-2 .activity-update,
+	#activity-3 .activity-update , #activity-4 .activity-update {
+		bottom: 22px;
+	}
+	
+	#activity-1 .time-update, #activity-2 .time-update,
+	#activity-3 .time-update , #activity-4 .time-update {
+		bottom: 6px;
+	}
+	
+	#downarrow-icon {
+		left: 92%;
+	}
+	
+	.message-and-settings {
+		padding-bottom: 2.5rem;
+	}
+	
+	.join-date {
+		left: 89%;
+	}
+	
+	.arrow-icon {
+		left: 94%;
+	}
 }
