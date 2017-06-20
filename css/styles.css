@@ -78,9 +78,8 @@ header h2 {
 	position: relative;
 }
 
-#bell-icon::after {
-    content: "";
-    position: absolute;
+.marker {
+	position: absolute;
     border-style: solid;
     border-color: #33ff33;
     height: 1.5px;
@@ -96,6 +95,70 @@ header h2 {
 	height: 30px;
 	border-radius: 50%;
 }
+
+.dropdown-content {
+	position: absolute;
+	background: #F0F8FF;
+	color: #696969;
+	width: 215px;
+	right: 0px;
+	margin-top: 1.25rem;
+	border-radius: 8px;
+	z-index: 1;
+	display: none;
+}
+
+.dropdown-content h3 {
+	font-size: 1rem;
+	margin: 1rem 0 0 0;
+	border-bottom: 1px solid #BCC6CC;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
+	font-weight: bold;
+	color: #654597;
+}
+
+.dropdown-content::before {
+	content: "";
+	border-style: solid;
+	border-width: 0 .5rem .75rem .5rem; 
+	border-color:  transparent transparent #F0F8FF transparent; /*change this color later */
+	position: absolute;
+	top: -.75rem;
+	margin-left: 11.50rem;  
+}
+
+.dropdown-content ul  li{
+	font-size: .9rem;
+	padding-left: 1.75rem;
+	position: relative;
+	padding-right: 1rem;
+	border-bottom: 1px solid #BCC6CC;
+	padding-bottom: 1rem;
+	padding-top: .75rem;
+}
+
+.dropdown-content ul  li:hover {
+	background-color: #FFF8DC;
+}
+
+.dropdown-content ul  li::before {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+    border-style: solid;	
+	border-color: #8FBC8F;
+	background: #8FBC8F;
+    height: 5px;
+    width: 5px;	
+	margin-left: -1.4rem;
+	bottom: 2rem;
+}
+
+.dropdown-content ul  li:nth-child(3)::before {
+	bottom: 1.15rem;
+}
+
 
 /****************************
 HAMBURGER MENU SETTINGS
@@ -164,7 +227,6 @@ SEARCH SECTION
 	display: flex;
 	position: relative;
 	justify-content: space-between;
-
 }
 
 #search-headline {
@@ -195,7 +257,6 @@ SEARCH SECTION
 	background-color: #6F7D8C;
 	padding: 1.25rem .75rem .8rem 0rem;
 }
-
 
 #search_icon {
 	width: 12px;
@@ -339,7 +400,7 @@ CHART SECTION
 }
 
 #lineChart {
-	height: 230px;
+	height: 230px; /* reset height to taller px, then work on different data sets for line charts*/
 }
 
 #barChart {
@@ -901,9 +962,9 @@ header {
 	margin-top: 1.25rem;
 }
 
-#bell-icon::after {
-    height: 1.75px;
-    width: 1.75px;
+.marker {
+    height: 2px;
+    width: 2px;
     margin-left: 1.15rem;
 	bottom: 100%;
 }
@@ -929,6 +990,34 @@ header h2 {
 	color: #6c7a86;
 	margin-top: 1.45rem;
 	font-weight: bold;
+}
+
+.dropdown-content ul  li::before {
+	margin-left: -1.25rem; 
+}
+
+.dropdown-content ul  li:nth-child(2)::before {
+	bottom: 2.2rem;
+}
+
+.dropdown-content ul  li:nth-child(1)::before {
+	bottom: 1.15rem;
+}
+
+.dropdown-content {
+	width: 290px;
+}
+
+.dropdown-content::before {
+	margin-left: 15rem;
+}
+
+.dropdown-content h3 {
+	font-size: 1.2rem;
+}
+
+.dropdown-content ul li {
+	font-size: 1rem;
 }
 
 /*******************************
@@ -1019,9 +1108,13 @@ CHART SECTION AT 768PX
 	padding-bottom: .75rem;
 }
 
-#donutChart {
-	height: 230px;
+#lineChart {
+	height: 270px;
  }
+ 
+#donutChart, #barChart {
+	height: 250px;
+}
 
 #mainBarDiv {
 	border-right: 1px solid #4B0082;
@@ -1235,14 +1328,6 @@ MEDIA QUERIES AT 1024PX
 		padding-bottom: 1.45rem;
 	}
 
-	#barChart {
-	 height: 240px;
-	}
-	
-	#donutChart {
-		height: 235px;
-	}
-	
 	.social-media {
 		padding: 0 0 2rem 0;
 	}
@@ -1288,4 +1373,15 @@ MEDIA QUERIES AT 1024PX
 	.arrow-icon {
 		left: 94%;
 	}
+	.email-div, .profile-div {
+		justify-content: flex-start;
+	}
+	
+	.email-div  h2 {
+		margin-right: 2.25rem;
+	}
+	
+	.profile-div h2 {
+		margin-right: 4.2rem;
+	}	
 }
