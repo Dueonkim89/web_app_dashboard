@@ -93,7 +93,46 @@ $('#user_searcher').autocomplete({
 		minLength: 0
 });
 
-//warning messages & success messages
+//warning messages & success message
+$('#send_button').click(function( event ) {
+	let $user_searcher = $('.message-section input');
+	let $user_message = $('.message-section textarea');
+	let userSearchError = $(`<p class="error_messages">Please enter a user.</p>`);
+	let messageError = $(`<p class="error_messages">Please enter a message.</p>`);
+	let successMessage = $(`<p class="success_message">Your message has been sent.</p>`);
+	event.preventDefault();
+	//refresh error message function
+	let messageReferesher = function() {
+		$('.error_messages').remove()
+	};
+	if ($user_searcher.val() === '' && $user_message.val() === '') {
+		messageReferesher();
+		$( $user_searcher ).removeAttr( "id" ).attr("id", "noUserFound");
+		$( $user_message ).removeAttr( "id" ).attr("id", "noMessageFound");
+		//inject error message
+		$(userSearchError).insertAfter( $('#noUserFound') );
+		//inject error message
+		$(messageError).insertAfter( $('#noMessageFound') );
+	} else if ($user_searcher.val() === '') {
+		messageReferesher();
+		$( $user_searcher ).removeAttr( "id" ).attr("id", "noUserFound");
+		$(userSearchError).insertAfter( $('#noUserFound') );
+		$( $user_message ).removeAttr( "id" ).attr("id", "user_message");
+	} else if ($user_message.val() === '') {
+		messageReferesher();
+		$( $user_searcher ).removeAttr( "id" ).attr("id", "user_searcher");
+		$( $user_message ).removeAttr( "id" ).attr("id", "noMessageFound");
+		$(messageError).insertAfter( $('#noMessageFound') );
+	} else {
+		messageReferesher();
+		$( $user_message ).removeAttr( "id" ).attr("id", "user_message").val('');
+		$( $user_searcher ).removeAttr( "id" ).attr("id", "user_searcher").val('');
+		$(successMessage).insertAfter( $($user_message) ).delay(1850).slideUp(700);
+	}
+});
+
+//local storage to save preferences
+
 
 
 
@@ -121,7 +160,6 @@ const lineChartData = {
 				Daily: 100
 			}			
 }
-
 
 //intialize the 3 default charts
 
@@ -210,4 +248,3 @@ var myDonutChart = new Chart (donutChart, {
 			}		
 	}
 });
-
