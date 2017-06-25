@@ -81,11 +81,11 @@ header h2 {
 .marker {
 	position: absolute;
     border-style: solid;
-    border-color: #33ff33;
+    border-color: #6B8E23;
     height: 1.5px;
     width: 1.5px;
     border-radius: 50%;
-    background: #33ff33;
+    background: #6B8E23;
     margin-left: 1.1rem;
 	bottom: 100%;
 }
@@ -622,6 +622,7 @@ form {
 	border-radius: 6px;
 	font-size: 1rem;
 	padding: 8px 0 8px 10px;
+	color: #7B68EE;
 }
 
 #noUserFound {
@@ -633,7 +634,8 @@ form {
 	border: 1.35px solid red;
 	border-radius: 6px;
 	font-size: 1rem;
-	padding: 8px 0 8px 10px;	
+	padding: 8px 0 8px 10px;
+	color: #7B68EE;	
 }
 
 #noUserFound:focus, #noMessageFound:focus {
@@ -657,6 +659,7 @@ form {
 	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);	
+	color: #7B68EE;
 }
 
 #user_message {
@@ -671,6 +674,7 @@ form {
 	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	color: #7B68EE;
 }
 
 .error_messages {

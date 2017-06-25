@@ -4,6 +4,12 @@ var nav = responsiveNav(".nav-collapse", {
 	transition: 500
 });
 
+// select the checkboxes and select element to enable global access within script
+let emailSettingsCheckBox = $( ".email-div [type=checkbox]" );
+let profileSettingsCheckBox = $( ".profile-div [type=checkbox]" );
+let timeZoneOptions = $('#timezone-options');
+
+
 //resize event to adjust based on changing viewport width.
 $(window).resize(function() {
 	if (window.innerWidth >= 768) {
@@ -21,6 +27,12 @@ $(window).resize(function() {
 
 //load event to adjust based on starting viewport width.
 $(window).load(function() {
+	let localStorageSettings = JSON.parse(localStorage.getItem('personalSettings'));
+	if (localStorageSettings) {
+		emailSettingsCheckBox.prop("checked", localStorageSettings[0]);
+		profileSettingsCheckBox .prop("checked", localStorageSettings[1]);
+		timeZoneOptions.val(localStorageSettings[2]);
+	}
 	$('.alert_message').hide().delay(950).slideDown(800);
 	if (window.innerWidth >= 768) {
 		$('header h2').show();
@@ -94,7 +106,7 @@ $('#user_searcher').autocomplete({
 });
 
 //warning messages & success message
-$('#send_button').click(function( event ) {
+$('#send_button').click(function(event) {
 	let $user_searcher = $('.message-section input');
 	let $user_message = $('.message-section textarea');
 	let userSearchError = $(`<p class="error_messages">Please enter a user.</p>`);
@@ -131,10 +143,33 @@ $('#send_button').click(function( event ) {
 	}
 });
 
-//local storage to save preferences
+//local storage to save settings
+function saveLocalStorage(email, profile, timeZone) {
+	let settingsArray = [];
+	settingsArray.push(email, profile, timeZone);
+	localStorage.setItem('personalSettings', JSON.stringify(settingsArray));
+}
 
+function emptyLocalStorage() {
+	localStorage.removeItem('personalSettings');
+}
 
+$('#save_button').click(function(event) {
+	event.preventDefault();
+	emptyLocalStorage()
+	let emailSettings = emailSettingsCheckBox.prop("checked");
+	let profileSettings = profileSettingsCheckBox .prop("checked");
+	let timeZoneSettings = timeZoneOptions.val();
+	saveLocalStorage(emailSettings, profileSettings, timeZoneSettings);
+});
 
+$('#cancel_button').click(function(event) {
+	event.preventDefault();
+	emptyLocalStorage()
+	timeZoneOptions.val('');
+	emailSettingsCheckBox.prop("checked", false);
+	profileSettingsCheckBox .prop("checked", false);
+});
 
 
 //alternative chart settings
