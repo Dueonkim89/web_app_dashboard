@@ -344,11 +344,8 @@ ALERT MESSAGE
 	outline: none;	
 	font-weight: bold;
 	position: absolute;
-	width: 18px;
-	height: 10px;
+	cursor: pointer;
 	margin-left: 12px;
-	margin-top: -10px;
-	width: calc(1% - 200px);
 }
 
 
@@ -1111,9 +1108,16 @@ SEARCH & ALERT SECTION AT 768PX
 	font-size: 1.1rem;
 }
 
-#search-button {
-	margin-left: -10px;
+@-moz-document url-prefix() { /* mozilla firefox only*/
+	#search-button {
+		margin-right: 12px;
+	}
 }
+
+#search-button {
+	margin-left: -12px;
+}
+
 
 .alert_message {
 	padding-left: 1rem;
@@ -1295,7 +1299,6 @@ MEMBERS SECTION AT 768PX
 .members-and-activity, .message-and-settings {
 	display: flex;
 	flex-direction: row;
-	border-bottom: 1px solid #4B0082;
 }
 
 .member-email , .time-update {
