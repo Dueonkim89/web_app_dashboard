@@ -14,14 +14,14 @@ let timeZoneOptions = $('#timezone-options');
 $(window).resize(function() {
 	if (window.innerWidth >= 768) {
 		$('header h2').show();
-		$('.members-and-activity #bottom-border').hide();
-		$('.message-and-settings #bottom-border').hide();
-		$('.social-media #bottom-border').hide();
+		$('.members-and-activity .bottom-border').hide();
+		$('.message-and-settings .bottom-border').hide();
+		$('.social-media .bottom-border').hide();
 	} else if (window.innerWidth < 768) {
 		$('header h2').hide();
-		$('.members-and-activity #bottom-border').show();
-		$('.message-and-settings #bottom-border').show();
-		$('.social-media #bottom-border').show();
+		$('.members-and-activity .bottom-border').show();
+		$('.message-and-settings .bottom-border').show();
+		$('.social-media .bottom-border').show();
 	}
 });
 
@@ -36,9 +36,9 @@ $(window).load(function() {
 	$('.alert_message').hide().delay(950).slideDown(800);
 	if (window.innerWidth >= 768) {
 		$('header h2').show();
-		$('.members-and-activity #bottom-border').hide();
-		$('.message-and-settings #bottom-border').hide();	
-		$('.social-media #bottom-border').hide();	
+		$('.members-and-activity .bottom-border').hide();
+		$('.message-and-settings .bottom-border').hide();	
+		$('.social-media .bottom-border').hide();	
 	}	
 });
 
@@ -115,7 +115,7 @@ $('#send_button').click(function(event) {
 	event.preventDefault();
 	//refresh error message function
 	let messageReferesher = function() {
-		$('.error_messages').remove()
+		$('.error_messages').remove();
 	};
 	if ($user_searcher.val() === '' && $user_message.val() === '') {
 		messageReferesher();
@@ -156,7 +156,7 @@ function emptyLocalStorage() {
 
 $('#save_button').click(function(event) {
 	event.preventDefault();
-	emptyLocalStorage()
+	emptyLocalStorage();
 	let emailSettings = emailSettingsCheckBox.prop("checked");
 	let profileSettings = profileSettingsCheckBox .prop("checked");
 	let timeZoneSettings = timeZoneOptions.val();
@@ -165,7 +165,7 @@ $('#save_button').click(function(event) {
 
 $('#cancel_button').click(function(event) {
 	event.preventDefault();
-	emptyLocalStorage()
+	emptyLocalStorage();
 	timeZoneOptions.val('');
 	emailSettingsCheckBox.prop("checked", false);
 	profileSettingsCheckBox .prop("checked", false);
@@ -194,7 +194,7 @@ const lineChartData = {
 				Hourly: 10,
 				Daily: 100
 			}			
-}
+};
 
 //intialize the 3 default charts
 
