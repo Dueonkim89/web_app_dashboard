@@ -57,9 +57,11 @@ $('#bell-icon').click(function() {
 var todayDate = new Date();
 var formattedDate = todayDate.toLocaleDateString();
 formattedDate = formattedDate.split(''); 
-formattedDate.splice(5,2);
+formattedDate.splice(formattedDate.length - 4,2);
 formattedDate = formattedDate.join('');
-$('.join-date').text(formattedDate);
+$('.join-date').text(formattedDate);	
+
+
 
 //member list
 const memberList = [
