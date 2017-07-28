@@ -9,6 +9,10 @@ let emailSettingsCheckBox = $( ".email-div [type=checkbox]" );
 let profileSettingsCheckBox = $( ".profile-div [type=checkbox]" );
 let timeZoneOptions = $('#timezone-options');
 
+let $alertMessage = $(`<p><strong>Alert: </strong> Nullam quis risus eget urna mollis ornare vel eu leo. 
+Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blanditur tempus porttitor.</p>`);
+let $alertMessageButton = $(`<button id="x-button">X</button>`);
+
 
 //resize event to adjust based on changing viewport width.
 $(window).resize(function() {
@@ -26,13 +30,15 @@ $(window).resize(function() {
 });
 
 //load event to adjust based on starting viewport width.
-$(window).load(function() {
+$(window).on('load', function () {
 	let localStorageSettings = JSON.parse(localStorage.getItem('personalSettings'));
 	if (localStorageSettings) {
 		emailSettingsCheckBox.prop("checked", localStorageSettings[0]);
 		profileSettingsCheckBox .prop("checked", localStorageSettings[1]);
 		timeZoneOptions.val(localStorageSettings[2]);
 	}
+	$('.alert_message').append($alertMessage);
+	$alertMessage.append($alertMessageButton);
 	$('.alert_message').hide().delay(950).slideDown(800);
 	if (window.innerWidth >= 768) {
 		$('header h2').show();
@@ -42,9 +48,13 @@ $(window).load(function() {
 	}	
 });
 
-//allow UI to close alert message
-$('#x-button').click(function() {
-	$(this).parent().parent().slideUp(800);
+//allow UI to close alert message 
+$('.alert_message').click(function(event) {
+	if (event.target.id = 'x-button') {
+		$('.alert_message').slideUp(800);
+	} else {
+		return;
+	}
 });
 
 //hide green alert marker after its clicked and show notifications
